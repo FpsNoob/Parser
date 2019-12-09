@@ -1,23 +1,17 @@
 #include "include/basic.h"
 #include "include/Lex.h"
 #include "include/Parsing.h"
+#include "include/Parsing_v2.h"
+#include "include/Parsing_SLR.h"
 
 
 
 int main() {
 	FILE* fp = NULL;
-	fp = fopen("C:\\Users\\TANGNI\\Desktop\\编译原理实验二\\test2.txt", "r");
+	fp = fopen("D:\\College\\大三上\\编译原理\\实验\\lab2\\test5.txt", "r");
 	lex(fp);   //词法分析
-	//for (int i = 0; i < cnt; i++) {
-	//	cout << "(" << symbolTables[i].value << ", " << symbolTables[i].name << ")" << endl;
-	//}
-	//fclose(fp);
-	//ofstream fout;
-	//fout.open("C:\\Users\\TANGNI\\Desktop\\编译原理实验二\\save.txt");
-	//for (int i = 0; i < cnt; i++) {
-	//	fout << "( " << symbolTables[i].value << ", " << symbolTables[i].name << ")" << endl;
-	//}
-	//fout.close();
-	Parsing();  //递归下降分析器
+	//Parsing();  //递归下降分析器
+	//Parsing_V2(); //预测分析法语法分析器
+	Parsing_SLR(); //SLR语法分析器
 	return 0;
 }
