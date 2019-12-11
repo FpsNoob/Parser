@@ -101,7 +101,7 @@ void Parsing_V2() {
 		if (x == "E" || x == "E'" || x == "T" || x == "T'" || x == "F") { //x为非终结符
 			Push_expr(st, x, a, advance_value()); //分析表，替换产生式
 		}
-		else if (advance_value() == 11 && x == "id") {
+		else if (advance_value() == 11 && x == "id") {	//匹配，下一个字符
 			ip++;
 			continue;
 		}
