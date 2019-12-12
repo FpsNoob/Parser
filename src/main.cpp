@@ -12,6 +12,7 @@ int main() {
 	lex(fp);   //词法分析
 	//Parsing();  //递归下降分析器
 	Parsing_V2(); //预测分析法语法分析器
+
 	//Parsing_SLR(); //SLR语法分析器
 	return 0;
 }
